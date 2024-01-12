@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+    Acceuil
+{% endblock %}
+{% block content %}
+<h3 class="alert alert-warning"> {{user}} Remplissez les champs pour envoyer votre travail </h3>
+<form method="post" action="envoistp">
+    {% csrf_token %}
+    <table>
+    {% for field in form %}
+      <tr>
+        <td>{{ field.label_tag }}</td>
+        <td>{{ field }}</td>
+      </tr>
+      {% for error in field.errors %}
+        <tr><td></td><td class="alert alert-danger">{{ error }}</td></tr>
+        {% endfor %}
+      {% endfor %}
+     </table>
+    <button type="submit">Envoyez</button>       
+</form>
+{% endblock %}

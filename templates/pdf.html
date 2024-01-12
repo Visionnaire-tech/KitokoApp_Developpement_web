@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+    Download
+{% endblock %}
+{% block content %}
+    <h1>TELECHARGER Le Support Du cours gratuit dans le site </h1>    
+    
+    <embed src="https://static.realpython.com/python-basics-sample-chapters.pdf" width="900px" height="400px">
+    <small>
+        Déjà inscrit.e?
+        <a href="{% url 'login' %}">
+            Se connecter
+        </a>
+    </small>
+  </div>
+{% endblock %}

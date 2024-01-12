@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}
+    Acceuil
+{% endblock %}
+{% block content %}
+<h3 class="alert alert-warning">Bienvenue Dans SkyblueApp {{user}}  !</h3>
+<br>
+<p>
+  <h5><a href="{% url 'envoistp' %}" class="alert alert-warning">Envoyer votre Tp</a></h5>
+</p><br>
+
+<p>
+  <h5><a href="{% url 'exer' %}" class="alert alert-warning">Exercises et resolution </a></h5>
+</p><br>
+
+<p>
+  <h5><a href="{% url 'pdf' %}" class="alert alert-warning">Téléchargement du support gratuit</a></h5>
+</p>
+    
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
+
+
